@@ -1,0 +1,42 @@
+MAKE A DATABASE CALLED "ds" in your PHPMyadmin
+Scripts assume user: "root" with no set password
+EDIT connect.php if necessary
+
+Create table users(
+  uid integer unsigned auto_increment not null,
+  uname varchar(100) unique not null,
+  fname varchar(100) not null,
+  sname varchar(100) not null,
+  pwd varchar(100) not null,
+  primary key (uid));
+ 
+insert into users (uname, fname, sname, pwd) values
+('pdub', 'Peter', 'Whitehouse', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+
+NOTE: the user pdub's password is "password" hashed using sha1
+
+create table products(
+pid integer unsigned auto_increment not null,
+pname varchar(100) not null,
+pdesc text not null,
+ppic varchar(100) not null,
+pcost decimal(10,2) not null,
+primary key(pid));
+
+insert into products(pname,pdesc,ppic,pcost)
+values ('Vogymite 100gm','Delicious on toast, Aussie classic','p1.jpg',3.50),
+('Wheetblox 250gm','The ultimate high fibre breakfast food','p2.jpg',4.50),
+('James West Tuna Milkshake 25gm','Chunks of fresh tuna pureed in yaks milk','p3.jpg',2.00),
+('Colgate Teeth Dissolving 20gm','For when the perfect smile is too much','p4.jpg',5.15),
+('Gnutella 1kg','Diabetes in a jar','p5.jpg',11.59);
+
+
+create table cart(
+itemid integer unsigned auto_increment not null,
+owner integer unsigned not null,
+pid integer unsigned not null,
+pname varchar(100) not null,
+qty integer unsigned not null,
+ucost decimal(10,2) not null,
+subt decimal(10,2) not null,
+primary key(itemid));
