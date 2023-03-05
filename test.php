@@ -5,7 +5,7 @@
     <body>
         <h1>Find Product - AJAX Tester</h1>
         <input type="text" id="productname" oninput="search();">
-        <p id="results">results</p>
+        <table id="myTable"></table>
     </body>
     <script src='js/new_ajax_helper.js'></script>
     <script src='js/custom.js'></script>

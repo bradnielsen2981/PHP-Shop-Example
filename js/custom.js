@@ -11,5 +11,19 @@ function search()
 
 function handleresults(results)
 {
-    console.log(results);
+    // Get reference to the HTML table
+    var table = document.getElementById('myTable');
+    table.innerHTML = "";
+    // Loop through the JSON array and insert each item into the HTML table
+    results.forEach(function(item) {
+        // Create a new row for the table
+        var row = table.insertRow();
+        // Insert the data into the row cells
+        var pname = row.insertCell(0);
+        pname.innerHTML = item.pname;
+        var pdesc = row.insertCell(1);
+        pdesc.innerHTML = item.pdesc;
+        var pcost = row.insertCell(2);
+        pcost.innerHTML = item.pcost;
+    });
 }
