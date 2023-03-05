@@ -108,4 +108,6 @@ session_start();
 	
 ?>
 </body>
+<script src='js/new_ajax_helper.js'></script>
+<script src='js/custom.js'></script>
 </html>

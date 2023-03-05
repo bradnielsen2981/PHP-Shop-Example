@@ -37,9 +37,6 @@ session_start();
     echo '<h3><a href="products.php">Go shopping</a></h3>';
     echo '<h3><a href="cart.php">View shopping cart</a></h3>';
 
-
-
-
 ?>
 </body>
 </html>
