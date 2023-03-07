@@ -5,6 +5,10 @@ alert("My JS has loaded!!!");
 //Document Event Model (DEM) 
 
 mybutton.onclick = function click(event) {
-    document.getElementById("starter").innerHTML = "Starting with Javascript.";
+    starter.innerHTML = "Starting with Javascript.";
+} 
+
+icon.onmouseover = function weird(event) {
+    alert("a mouse over");
 } 
 

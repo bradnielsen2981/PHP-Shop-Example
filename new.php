@@ -6,6 +6,8 @@
         <h1>New</h1>
         <p id="starter"></p>
         <button id="mybutton">Click Me!</button>
+        <img id="icon" src="img/basket.png">
+        <br/>
     </body>
     <script src='js/myjs.js'></script>
 </html>
