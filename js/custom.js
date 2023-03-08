@@ -9,11 +9,14 @@ function search()
     new_ajax_helper('/shop/getresults.php',handleresults,formobject); //send the formobject to the url, you can define a callback 
 }
 
-function handleresults(results)
+function handleresults(results) //RECEIVES JSON RESPONSE
 {
+    console.log(results);
     // Get reference to the HTML table
     var table = document.getElementById('myTable');
     table.innerHTML = "";
+
+    //Got from Chat GPT
     // Loop through the JSON array and insert each item into the HTML table
     results.forEach(function(item) {
         // Create a new row for the table
